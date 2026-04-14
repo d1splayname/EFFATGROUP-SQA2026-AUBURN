@@ -1,0 +1,34 @@
+name: cfr-vv
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate JSON Files If CFR Input Exists
+        run: |
+          if [ -f inputs/21_CFR_117.130.md ]; then
+            python scripts/parse_cfr.py
+            python scripts/generate_expected_structure.py
+            python scripts/generate_test_cases.py
+          else
+            echo "inputs/21_CFR_117.130.md not found. Using committed JSON files."
+          fi
+
+      - name: Run Verification
+        run: python scripts/verification.py
+
+      - name: Run Validation
+        run: python scripts/validation.py

@@ -1,0 +1,82 @@
+[
+  {
+    "requirement_id": "REQ-CFR-001A",
+    "parent_requirement_id": "REQ-CFR-001",
+    "source_section": "21 CFR 117.130(a)(1)",
+    "top_level_section": "21 CFR 117.130(a)",
+    "description": "Requirement for a hazard analysis You must conduct a hazard analysis to identify and evaluate, based on experience, illness data, scientific reports, and other information, known or reasonably foreseeable hazards for each type of food manufactured, processed, packed, or held at your facility to determine whether there are any hazards requiring a preventive control.",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-001B",
+    "parent_requirement_id": "REQ-CFR-001",
+    "source_section": "21 CFR 117.130(a)(2)",
+    "top_level_section": "21 CFR 117.130(a)",
+    "description": "Requirement for a hazard analysis The hazard analysis must be written regardless of its outcome.",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-002A",
+    "parent_requirement_id": "REQ-CFR-002",
+    "source_section": "21 CFR 117.130(b)(1)(i)",
+    "top_level_section": "21 CFR 117.130(b)",
+    "description": "Hazard identification The hazard identification must consider Known or reasonably foreseeable hazards that include Biological hazards, including microbiological hazards such as parasites, environmental pathogens, and other pathogens",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-002B",
+    "parent_requirement_id": "REQ-CFR-002",
+    "source_section": "21 CFR 117.130(b)(1)(ii)",
+    "top_level_section": "21 CFR 117.130(b)",
+    "description": "Hazard identification The hazard identification must consider Known or reasonably foreseeable hazards that include Chemical hazards, including radiological hazards, substances such as pesticide and drug residues, natural toxins, decomposition, unapproved food or color additives, and food allergens; and",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-002C",
+    "parent_requirement_id": "REQ-CFR-002",
+    "source_section": "21 CFR 117.130(b)(1)(iii)",
+    "top_level_section": "21 CFR 117.130(b)",
+    "description": "Hazard identification The hazard identification must consider Known or reasonably foreseeable hazards that include Physical hazards (such as stones, glass, and metal fragments); and",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-002D",
+    "parent_requirement_id": "REQ-CFR-002",
+    "source_section": "21 CFR 117.130(b)(2)(i)",
+    "top_level_section": "21 CFR 117.130(b)",
+    "description": "Hazard identification The hazard identification must consider Known or reasonably foreseeable hazards that may be present in the food for any of the following reasons The hazard occurs naturally",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-002E",
+    "parent_requirement_id": "REQ-CFR-002",
+    "source_section": "21 CFR 117.130(b)(2)(ii)",
+    "top_level_section": "21 CFR 117.130(b)",
+    "description": "Hazard identification The hazard identification must consider Known or reasonably foreseeable hazards that may be present in the food for any of the following reasons The hazard may be unintentionally introduced; or",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-002F",
+    "parent_requirement_id": "REQ-CFR-002",
+    "source_section": "21 CFR 117.130(b)(2)(iii)",
+    "top_level_section": "21 CFR 117.130(b)",
+    "description": "Hazard identification The hazard identification must consider Known or reasonably foreseeable hazards that may be present in the food for any of the following reasons The hazard may be intentionally introduced for purposes of economic gain.",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-003A",
+    "parent_requirement_id": "REQ-CFR-003",
+    "source_section": "21 CFR 117.130(c)(1)(i)",
+    "top_level_section": "21 CFR 117.130(c)",
+    "description": "Hazard evaluation The hazard analysis must include an evaluation of the hazards identified in paragraph (b) of this section to assess the severity of the illness or injury if the hazard were to occur and the probability that the hazard will occur in the absence of preventive controls.",
+    "source_file": "21_CFR_117.130.md"
+  },
+  {
+    "requirement_id": "REQ-CFR-003B",
+    "parent_requirement_id": "REQ-CFR-003",
+    "source_section": "21 CFR 117.130(c)(1)(ii)",
+    "top_level_section": "21 CFR 117.130(c)",
+    "description": "Hazard evaluation The hazard evaluation required by paragraph (c)(1)(i) of this section must include an evaluation of environmental pathogens whenever a ready-to-eat food is exposed to the environment prior to packaging and the packaged food does not receive a treatment or otherwise include a control measure (such as a formulation lethal to the pathogen) that would significantly minimize the pathogen.",
+    "source_file": "21_CFR_117.130.md"
+  }
+]
