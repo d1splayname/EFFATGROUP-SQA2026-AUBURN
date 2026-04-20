@@ -1,0 +1,37 @@
+[
+  {
+    "test_case_id": "TC-001",
+    "requirement_id": "REQ-CFR-001A",
+    "description": "Verify that a hazard analysis is conducted for the system.",
+    "input_data": "The system under test is a medical device used to monitor vital signs in patients.",
+    "expected_output": "The system should perform a hazard analysis and provide a report detailing potential hazards and risks associated with its use."
+  },
+  {
+    "test_case_id": "TC-002",
+    "requirement_id": "REQ-CFR-001B",
+    "description": "Verify that the hazard analysis is written regardless of the outcome of the analysis.",
+    "input_data": "A hazard analysis report with a positive outcome and a negative outcome.",
+    "expected_output": "The hazard analysis report should contain a written analysis for both positive and negative outcomes."
+  },
+  {
+    "test_case_id": "TC-003",
+    "requirement_id": "REQ-CFR-002A",
+    "description": "Verify that the system can detect and prevent biological hazards such as parasites, environmental pathogens, and other pathogens.",
+    "input_data": "Input data: A sample of food product with known biological contamination.",
+    "expected_output": "The system should detect and prevent the biological contamination from entering the food supply chain."
+  },
+  {
+    "test_case_id": "TC-004",
+    "requirement_id": "REQ-CFR-002B",
+    "description": "Test for the presence of pesticide residues in fresh produce.",
+    "input_data": "A sample of fresh produce, such as lettuce or strawberries, collected from a grocery store.",
+    "expected_output": "The presence or absence of pesticide residues in the fresh produce sample."
+  },
+  {
+    "test_case_id": "TC-005",
+    "requirement_id": "REQ-CFR-003A",
+    "description": "Verify that the hazard analysis includes an evaluation of known or reasonably foreseeable hazards to assess severity of illness or injury if the hazard were to occur.",
+    "input_data": "A sample hazard analysis report with known and foreseeable hazards identified and their severity evaluated.",
+    "expected_output": "The hazard analysis report should include an evaluation of known or reasonably foreseeable hazards and their severity, as well as any recommendations for mitigation or control measures."
+  }
+]

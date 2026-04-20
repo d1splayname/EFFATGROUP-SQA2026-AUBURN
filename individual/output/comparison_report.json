@@ -1,0 +1,649 @@
+{
+  "models_compared": {
+    "mistral": "mistral-large-latest (Mistral API)",
+    "quantized_mistral": "mistral:7b-instruct-q4_K_M (Ollama)"
+  },
+  "assignment_criteria": [
+    "coverage",
+    "correctness",
+    "completeness"
+  ],
+  "coverage_summary": {
+    "total_requirements_checked": 5,
+    "both_models_produced_at_least_one_case": 5,
+    "mistral_missing": [],
+    "quantized_missing": []
+  },
+  "manual_review_required": true,
+  "manual_review_note": "Correctness cannot be fully guaranteed by automation alone. Use this report plus manual review of each generated test case.",
+  "per_requirement_results": [
+    {
+      "requirement_id": "REQ-CFR-001A",
+      "requirement_text": "(a)(1) Conduct a hazard analysis",
+      "coverage": {
+        "mistral_has_case": true,
+        "quantized_has_case": true,
+        "coverage_pass": true
+      },
+      "mistral_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": true,
+            "has_notes": true
+          }
+        },
+        "correctness": {
+          "heuristic_match": false,
+          "requirement_keyword_overlap_ratio": 0.0,
+          "overlapping_keywords": [],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-001",
+          "requirement_id": "REQ-CFR-001A",
+          "description": "Verify that the system requires and records a hazard analysis process as part of its workflow, ensuring compliance with regulatory requirements for hazard identification and assessment.",
+          "input_data": {
+            "scenario": "Initiation of a new product or process evaluation",
+            "user_role": "Quality Assurance Specialist",
+            "system_module": "Hazard Analysis Module",
+            "required_fields": [
+              "Hazard Identification",
+              "Severity Assessment",
+              "Likelihood Assessment",
+              "Risk Level Determination",
+              "Mitigation Measures"
+            ]
+          },
+          "expected_output": {
+            "system_response": "System prompts the user to complete a hazard analysis form with all required fields before proceeding.",
+            "validation": "All fields in the hazard analysis are mandatory and must be filled out with valid data.",
+            "record_creation": "A hazard analysis record is created and stored in the system with a unique identifier, timestamp, and user details.",
+            "compliance_check": "System ensures the hazard analysis adheres to predefined regulatory criteria (e.g., CFR guidelines)."
+          },
+          "steps": [
+            "Log in to the system as a Quality Assurance Specialist.",
+            "Navigate to the Hazard Analysis Module.",
+            "Select the option to initiate a new hazard analysis for a product or process.",
+            "Verify that the system presents a hazard analysis form with all required fields.",
+            "Attempt to submit the form without filling in any fields; confirm the system prevents submission and highlights missing fields.",
+            "Fill in all required fields with valid data and submit the form.",
+            "Verify that the system creates a record of the hazard analysis and provides a confirmation message with a unique identifier.",
+            "Check the system logs or database to confirm the record is stored with all submitted data, timestamp, and user details."
+          ],
+          "notes": [
+            "This test case ensures the system enforces the completion of a hazard analysis as mandated by regulatory requirements.",
+            "The hazard analysis form should align with industry standards and regulatory guidelines (e.g., CFR Part 110 or applicable sections).",
+            "Edge cases, such as incomplete submissions or invalid data entries, should be tested separately to ensure robust validation."
+          ]
+        }
+      },
+      "quantized_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": false,
+            "has_notes": false
+          }
+        },
+        "correctness": {
+          "heuristic_match": false,
+          "requirement_keyword_overlap_ratio": 0.0,
+          "overlapping_keywords": [],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-001",
+          "requirement_id": "REQ-CFR-001A",
+          "description": "Verify that a hazard analysis is conducted for the system.",
+          "input_data": "The system under test is a medical device used to monitor vital signs in patients.",
+          "expected_output": "The system should perform a hazard analysis and provide a report detailing potential hazards and risks associated with its use."
+        }
+      }
+    },
+    {
+      "requirement_id": "REQ-CFR-001B",
+      "requirement_text": "(a)(2) The hazard analysis must be written regardless of the outcome of the analysis",
+      "coverage": {
+        "mistral_has_case": true,
+        "quantized_has_case": true,
+        "coverage_pass": true
+      },
+      "mistral_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": true,
+            "has_notes": true
+          }
+        },
+        "correctness": {
+          "heuristic_match": true,
+          "requirement_keyword_overlap_ratio": 1.0,
+          "overlapping_keywords": [
+            "outcome",
+            "regardless",
+            "written"
+          ],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-002",
+          "requirement_id": "REQ-CFR-001B",
+          "description": "Verify that a written hazard analysis is produced regardless of whether hazards are identified or not during the analysis process.",
+          "input_data": {
+            "scenario": "Conduct a hazard analysis for a food production process where no hazards are identified during the assessment.",
+            "documentation_requirement": "A written record of the hazard analysis must be generated."
+          },
+          "expected_output": {
+            "documentation_exists": true,
+            "documentation_content": "A written hazard analysis report exists, explicitly stating that no hazards were identified during the analysis."
+          },
+          "steps": [
+            "1. Perform a hazard analysis for the specified food production process.",
+            "2. Ensure the analysis concludes with no identified hazards.",
+            "3. Check if a written hazard analysis report is generated.",
+            "4. Verify the report explicitly states the outcome of the analysis (i.e., no hazards identified)."
+          ],
+          "notes": "This test ensures compliance with the requirement that documentation must be produced even when no hazards are found, preventing gaps in record-keeping."
+        }
+      },
+      "quantized_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": false,
+            "has_notes": false
+          }
+        },
+        "correctness": {
+          "heuristic_match": true,
+          "requirement_keyword_overlap_ratio": 1.0,
+          "overlapping_keywords": [
+            "outcome",
+            "regardless",
+            "written"
+          ],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-002",
+          "requirement_id": "REQ-CFR-001B",
+          "description": "Verify that the hazard analysis is written regardless of the outcome of the analysis.",
+          "input_data": "A hazard analysis report with a positive outcome and a negative outcome.",
+          "expected_output": "The hazard analysis report should contain a written analysis for both positive and negative outcomes."
+        }
+      }
+    },
+    {
+      "requirement_id": "REQ-CFR-002A",
+      "requirement_text": "(b)(1)(i) Biological hazards, including microbiological hazards such as parasites, environmental pathogens, and other pathogens",
+      "coverage": {
+        "mistral_has_case": true,
+        "quantized_has_case": true,
+        "coverage_pass": true
+      },
+      "mistral_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": true,
+            "has_notes": true
+          }
+        },
+        "correctness": {
+          "heuristic_match": true,
+          "requirement_keyword_overlap_ratio": 0.889,
+          "overlapping_keywords": [
+            "biological",
+            "environmental",
+            "hazards",
+            "microbiological",
+            "other",
+            "parasites",
+            "pathogens",
+            "such"
+          ],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-003",
+          "requirement_id": "REQ-CFR-002A",
+          "description": "Verify that the system correctly identifies and flags biological hazards, specifically microbiological hazards such as parasites, environmental pathogens, and other pathogens, in food samples during analysis.",
+          "input_data": {
+            "sample_type": "food_sample",
+            "sample_data": {
+              "microbiological_analysis": {
+                "parasites_detected": [
+                  "Anisakis simplex"
+                ],
+                "environmental_pathogens_detected": [
+                  "Listeria monocytogenes"
+                ],
+                "other_pathogens_detected": [
+                  "Salmonella enterica"
+                ]
+              },
+              "non_hazardous_microbes": [
+                "Lactobacillus acidophilus"
+              ]
+            }
+          },
+          "expected_output": {
+            "hazard_identification": {
+              "status": "positive",
+              "hazards_detected": [
+                {
+                  "type": "parasite",
+                  "name": "Anisakis simplex",
+                  "risk_level": "high"
+                },
+                {
+                  "type": "environmental_pathogen",
+                  "name": "Listeria monocytogenes",
+                  "risk_level": "high"
+                },
+                {
+                  "type": "other_pathogen",
+                  "name": "Salmonella enterica",
+                  "risk_level": "high"
+                }
+              ],
+              "non_hazardous_microbes_ignored": [
+                "Lactobacillus acidophilus"
+              ]
+            }
+          },
+          "steps": [
+            "Input the food sample data into the system for microbiological analysis.",
+            "Ensure the system processes the sample data and scans for biological hazards.",
+            "Verify that the system correctly identifies and flags the listed parasites, environmental pathogens, and other pathogens.",
+            "Confirm that non-hazardous microbes are not flagged as hazards."
+          ],
+          "notes": "This test case ensures compliance with CFR regulatory requirements for identifying biological hazards in food safety analysis. The system should distinguish between hazardous and non-hazardous microbes accurately."
+        }
+      },
+      "quantized_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": false,
+            "has_notes": false
+          }
+        },
+        "correctness": {
+          "heuristic_match": true,
+          "requirement_keyword_overlap_ratio": 0.778,
+          "overlapping_keywords": [
+            "biological",
+            "environmental",
+            "hazards",
+            "other",
+            "parasites",
+            "pathogens",
+            "such"
+          ],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-003",
+          "requirement_id": "REQ-CFR-002A",
+          "description": "Verify that the system can detect and prevent biological hazards such as parasites, environmental pathogens, and other pathogens.",
+          "input_data": "Input data: A sample of food product with known biological contamination.",
+          "expected_output": "The system should detect and prevent the biological contamination from entering the food supply chain."
+        }
+      }
+    },
+    {
+      "requirement_id": "REQ-CFR-002B",
+      "requirement_text": "(b)(1)(ii) Chemical hazards, including radiological hazards, substances such as pesticide and drug residues, natural toxins, decomposition, unapproved food or color additives, and food allergens",
+      "coverage": {
+        "mistral_has_case": true,
+        "quantized_has_case": true,
+        "coverage_pass": true
+      },
+      "mistral_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": true,
+            "has_notes": true
+          }
+        },
+        "correctness": {
+          "heuristic_match": true,
+          "requirement_keyword_overlap_ratio": 0.882,
+          "overlapping_keywords": [
+            "additives",
+            "allergens",
+            "chemical",
+            "color",
+            "decomposition",
+            "drug",
+            "food",
+            "hazards",
+            "including",
+            "natural",
+            "pesticide",
+            "radiological",
+            "residues",
+            "toxins",
+            "unapproved"
+          ],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-004",
+          "requirement_id": "REQ-CFR-002B",
+          "description": "Verify that the system correctly identifies and flags chemical hazards, including radiological hazards, pesticide and drug residues, natural toxins, decomposition, unapproved food or color additives, and food allergens in food samples.",
+          "input_data": {
+            "sample_id": "SMPL-2023-0456",
+            "test_parameters": {
+              "chemical_hazards": {
+                "radiological_hazards": [
+                  "Iodine-131",
+                  "Cesium-137"
+                ],
+                "pesticide_residues": [
+                  "Chlorpyrifos",
+                  "Glyphosate"
+                ],
+                "drug_residues": [
+                  "Oxytetracycline",
+                  "Penicillin"
+                ],
+                "natural_toxins": [
+                  "Aflatoxin B1",
+                  "Saxitoxin"
+                ],
+                "decomposition_indicators": [
+                  "Histamine",
+                  "Cadaverine"
+                ],
+                "unapproved_additives": [
+                  "Sudan Red",
+                  "Melamine"
+                ],
+                "food_allergens": [
+                  "Peanuts",
+                  "Milk",
+                  "Soy"
+                ]
+              },
+              "thresholds": {
+                "radiological_hazards": {
+                  "Iodine-131": 100,
+                  "Cesium-137": 1000
+                },
+                "pesticide_residues": {
+                  "Chlorpyrifos": 0.01,
+                  "Glyphosate": 0.5
+                },
+                "drug_residues": {
+                  "Oxytetracycline": 0.1,
+                  "Penicillin": 0.005
+                },
+                "natural_toxins": {
+                  "Aflatoxin B1": 0.02,
+                  "Saxitoxin": 0.8
+                },
+                "decomposition_indicators": {
+                  "Histamine": 50,
+                  "Cadaverine": 30
+                },
+                "unapproved_additives": {
+                  "Sudan Red": 0,
+                  "Melamine": 0
+                },
+                "food_allergens": {
+                  "Peanuts": 0,
+                  "Milk": 0,
+                  "Soy": 0
+                }
+              }
+            },
+            "sample_results": {
+              "Iodine-131": 120,
+              "Cesium-137": 950,
+              "Chlorpyrifos": 0.015,
+              "Glyphosate": 0.3,
+              "Oxytetracycline": 0.05,
+              "Penicillin": 0.006,
+              "Aflatoxin B1": 0.025,
+              "Saxitoxin": 0.5,
+              "Histamine": 60,
+              "Cadaverine": 25,
+              "Sudan Red": 0.1,
+              "Melamine": 0,
+              "Peanuts": 1,
+              "Milk": 0,
+              "Soy": 0
+            }
+          },
+          "expected_output": {
+            "flagged_hazards": [
+              {
+                "hazard": "Iodine-131",
+                "type": "radiological_hazards",
+                "status": "Above threshold"
+              },
+              {
+                "hazard": "Chlorpyrifos",
+                "type": "pesticide_residues",
+                "status": "Above threshold"
+              },
+              {
+                "hazard": "Penicillin",
+                "type": "drug_residues",
+                "status": "Above threshold"
+              },
+              {
+                "hazard": "Aflatoxin B1",
+                "type": "natural_toxins",
+                "status": "Above threshold"
+              },
+              {
+                "hazard": "Histamine",
+                "type": "decomposition_indicators",
+                "status": "Above threshold"
+              },
+              {
+                "hazard": "Sudan Red",
+                "type": "unapproved_additives",
+                "status": "Detected"
+              },
+              {
+                "hazard": "Peanuts",
+                "type": "food_allergens",
+                "status": "Detected"
+              }
+            ],
+            "compliance_status": "Non-Compliant"
+          },
+          "steps": [
+            "Input the sample ID and test parameters into the system.",
+            "Enter the sample results for each hazard type.",
+            "Execute the hazard detection and compliance check.",
+            "Review the system's output for flagged hazards and compliance status."
+          ],
+          "notes": "The test ensures the system accurately detects and flags all specified chemical hazards as per regulatory thresholds. Unapproved additives and allergens should always be flagged if detected, regardless of concentration."
+        }
+      },
+      "quantized_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": false,
+            "has_notes": false
+          }
+        },
+        "correctness": {
+          "heuristic_match": false,
+          "requirement_keyword_overlap_ratio": 0.176,
+          "overlapping_keywords": [
+            "pesticide",
+            "residues",
+            "such"
+          ],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-004",
+          "requirement_id": "REQ-CFR-002B",
+          "description": "Test for the presence of pesticide residues in fresh produce.",
+          "input_data": "A sample of fresh produce, such as lettuce or strawberries, collected from a grocery store.",
+          "expected_output": "The presence or absence of pesticide residues in the fresh produce sample."
+        }
+      }
+    },
+    {
+      "requirement_id": "REQ-CFR-003A",
+      "requirement_text": "(c)(1)(i) The hazard analysis must include an evaluation of the known or reasonably foreseeable hazards to assess the severity of the illness or injury if the hazard were to occur",
+      "coverage": {
+        "mistral_has_case": true,
+        "quantized_has_case": true,
+        "coverage_pass": true
+      },
+      "mistral_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": true,
+            "has_notes": true
+          }
+        },
+        "correctness": {
+          "heuristic_match": true,
+          "requirement_keyword_overlap_ratio": 1.0,
+          "overlapping_keywords": [
+            "assess",
+            "evaluation",
+            "foreseeable",
+            "hazards",
+            "illness",
+            "injury",
+            "known",
+            "occur",
+            "reasonably",
+            "severity",
+            "were"
+          ],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-005",
+          "requirement_id": "REQ-CFR-003A",
+          "description": "Verify that the hazard analysis module correctly evaluates known or reasonably foreseeable hazards and assesses the severity of illness or injury if the hazard were to occur.",
+          "input_data": {
+            "hazard_data": [
+              {
+                "hazard_id": "HZ-001",
+                "hazard_description": "Presence of Salmonella in raw chicken",
+                "likelihood_of_occurrence": "High",
+                "severity_of_illness": "Severe (potential hospitalization or death)"
+              },
+              {
+                "hazard_id": "HZ-002",
+                "hazard_description": "Foreign object contamination (e.g., metal fragments) in packaged food",
+                "likelihood_of_occurrence": "Medium",
+                "severity_of_illness": "Moderate (potential injury, non-life-threatening)"
+              }
+            ],
+            "analysis_parameters": {
+              "severity_scale": {
+                "Severe": 3,
+                "Moderate": 2,
+                "Mild": 1
+              },
+              "likelihood_scale": {
+                "High": 3,
+                "Medium": 2,
+                "Low": 1
+              }
+            }
+          },
+          "expected_output": {
+            "hazard_evaluation_results": [
+              {
+                "hazard_id": "HZ-001",
+                "risk_score": 9,
+                "severity_assessment": "Severe illness or injury confirmed, requires mitigation",
+                "validation_status": "Pass"
+              },
+              {
+                "hazard_id": "HZ-002",
+                "risk_score": 4,
+                "severity_assessment": "Moderate injury confirmed, requires evaluation for mitigation",
+                "validation_status": "Pass"
+              }
+            ],
+            "overall_assessment": "Hazard analysis completed successfully with severity and risk assessments for all input hazards."
+          },
+          "steps": [
+            "1. Launch the hazard analysis module in the software.",
+            "2. Input the provided hazard data (HZ-001 and HZ-002) into the system.",
+            "3. Configure the severity and likelihood scales as defined in the input_data.",
+            "4. Execute the hazard analysis evaluation.",
+            "5. Review the output to ensure each hazard's severity and risk score are calculated correctly.",
+            "6. Verify that the severity assessment aligns with the expected outcomes for each hazard."
+          ],
+          "notes": "This test case ensures compliance with 21 CFR Part 117, specifically evaluating the software's ability to assess hazard severity as required by REQ-CFR-003A. The risk score is calculated as the product of severity and likelihood values."
+        }
+      },
+      "quantized_evaluation": {
+        "completeness": {
+          "is_complete": true,
+          "missing_required_fields": [],
+          "empty_required_fields": [],
+          "optional_fields": {
+            "has_steps": false,
+            "has_notes": false
+          }
+        },
+        "correctness": {
+          "heuristic_match": true,
+          "requirement_keyword_overlap_ratio": 1.0,
+          "overlapping_keywords": [
+            "assess",
+            "evaluation",
+            "foreseeable",
+            "hazards",
+            "illness",
+            "injury",
+            "known",
+            "occur",
+            "reasonably",
+            "severity",
+            "were"
+          ],
+          "manual_review_note": "Check whether the description truly tests the requirement, since automated correctness is only heuristic."
+        },
+        "test_case": {
+          "test_case_id": "TC-005",
+          "requirement_id": "REQ-CFR-003A",
+          "description": "Verify that the hazard analysis includes an evaluation of known or reasonably foreseeable hazards to assess severity of illness or injury if the hazard were to occur.",
+          "input_data": "A sample hazard analysis report with known and foreseeable hazards identified and their severity evaluated.",
+          "expected_output": "The hazard analysis report should include an evaluation of known or reasonably foreseeable hazards and their severity, as well as any recommendations for mitigation or control measures."
+        }
+      }
+    }
+  ]
+}

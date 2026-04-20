@@ -1,0 +1,22 @@
+[
+  {
+    "requirement_id": "REQ-CFR-001A",
+    "text": "(a)(1) Conduct a hazard analysis"
+  },
+  {
+    "requirement_id": "REQ-CFR-001B",
+    "text": "(a)(2) The hazard analysis must be written regardless of the outcome of the analysis"
+  },
+  {
+    "requirement_id": "REQ-CFR-002A",
+    "text": "(b)(1)(i) Biological hazards, including microbiological hazards such as parasites, environmental pathogens, and other pathogens"
+  },
+  {
+    "requirement_id": "REQ-CFR-002B",
+    "text": "(b)(1)(ii) Chemical hazards, including radiological hazards, substances such as pesticide and drug residues, natural toxins, decomposition, unapproved food or color additives, and food allergens"
+  },
+  {
+    "requirement_id": "REQ-CFR-003A",
+    "text": "(c)(1)(i) The hazard analysis must include an evaluation of the known or reasonably foreseeable hazards to assess the severity of the illness or injury if the hazard were to occur"
+  }
+]
